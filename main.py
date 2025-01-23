@@ -3,7 +3,8 @@ import cv2
 # Load model tốt nhất đã được train
 model = YOLO(r'\Identify Fire\best n.pt')
 # Khởi tạo camera, 0 mặc định là camera ở local
-cam = cv2.VideoCapture(r"G:\Identify Fire\t1.mp4")
+
+cam = cv2.VideoCapture(r"G:\Identify Fire\test.mp4")
 
 while True:
     # Đọc ảnh
