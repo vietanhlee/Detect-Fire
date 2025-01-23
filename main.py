@@ -4,7 +4,7 @@ import cv2
 model = YOLO(r'\Identify Fire\best n.pt')
 # Khởi tạo camera, 0 mặc định là camera ở local
 
-cam = cv2.VideoCapture(r"G:\Identify Fire\test.mp4")
+cam = cv2.VideoCapture(r'\Identify Fire\test.mp4')
 
 while True:
     # Đọc ảnh
