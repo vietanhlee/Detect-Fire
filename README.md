@@ -8,13 +8,14 @@ Dự án sử dụng cấu trúc mạng `YOLO`, train tận dụng lại model p
 
 
 ## Demo kết quả
-![]('G:\testYOLO\Identify Fire\demo 1.png')
+![](https://raw.githubusercontent.com/vietanhlee/Identify-Fire/refs/heads/main/demo%201.png)
 
-*Khi không có lửa*
+<p align = 'center'> Khi phát ra hiện </p>
 
-![]()
+![](https://raw.githubusercontent.com/vietanhlee/Identify-Fire/refs/heads/main/demo%202.png)
 
-*Khi có lửa*
+<p align = 'center'> Khi Không có lửa </p>
+
 ## Cách chạy
 
 ### Cài thư viện cần thiết:
