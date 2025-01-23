@@ -37,7 +37,7 @@ Dự án sử dụng cấu trúc mạng `YOLO`, train tận dụng lại model p
   ```python
   cam = cv2.VideoCapture(r'\Identify Fire\test.mp4)
   ``` 
-  ở dòng 6 file `\Identify Fire\main.py` thành
+  ở dòng 7 file `\Identify Fire\main.py` thành
   ``` python
   cam = cv2.VideoCapture(0)
   ```
