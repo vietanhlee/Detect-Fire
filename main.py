@@ -1,10 +1,22 @@
 from ultralytics import YOLO
 import cv2
+import requests
+import datetime
+import threading
+
+
 # Load model tốt nhất đã được train
-model = YOLO(r'\Identify Fire\best n.pt')
+model = YOLO(r'\Identify Fire\model.pt')
 # Khởi tạo camera, 0 mặc định là camera ở local
 
 cam = cv2.VideoCapture(r'\Identify Fire\test.mp4')
+
+api_key = '7278180996:AAF3zjRmDm2tpTYzl5W1rRXMfTBkt47xWBA'
+id = '5510302349'
+chat = f'Có cháy lúc {datetime.datetime.now().time()}'
+url = f'https://api.telegram.org/bot{api_key}/sendMessage?chat_id={id}&text={chat}'
+def send_telegram_message():
+    requests.get(url)
 
 while True:
     # Đọc ảnh
@@ -16,7 +28,7 @@ while True:
         break
     
     # Dự đoán 
-    res = model.predict(source= cap, conf = 0.2, verbose= False) # verbose = False để tắt các dòng thông báo thừa
+    res = model.predict(source= cap, conf = 0.4, verbose= False) # verbose = False để tắt các dòng thông báo thừa
     res = res[0] 
     cls = res.boxes.cls
     # Lấy ra độ tin cậy của từng box
@@ -48,13 +60,19 @@ while True:
     # Thông báo về số ngọn lửa được tìm thấy
     fire = len(boxes)
     if(fire != 0):
+        # Ghi lên màn
         cv2.putText(cap, f'{fire} fire detected', (30, 35),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0,0,255), 2
                 )
+        # Cảnh báo cháy qua telegram
+        
     else:
         cv2.putText(cap, f'No fire visible in the observation area', (30, 35),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2
                 )
+        
+        if(api_key != None):
+             threading.Thread(target=send_telegram_message, daemon=True).start()
     # Hiển thị ra màn hình
     cv2.imshow('app', cap)
     if cv2.waitKey(1) & 0xFF == ord('q'):

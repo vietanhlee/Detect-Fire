@@ -10,7 +10,7 @@ Dự án sử dụng cấu trúc mạng `YOLO`, train tận dụng lại model p
 ## Demo kết quả
 ![](https://raw.githubusercontent.com/vietanhlee/Identify-Fire/refs/heads/main/demo%201.png)
 
-<p align = 'center'> Khi phát ra hiện </p>
+<p align = 'center'> Khi phát hiện ra lửa</p>
 
 ![](https://raw.githubusercontent.com/vietanhlee/Identify-Fire/refs/heads/main/demo%202.png)
 
@@ -22,7 +22,7 @@ Dự án sử dụng cấu trúc mạng `YOLO`, train tận dụng lại model p
 - Mở terminal ở thư mục vừa clone và chạy đoạn lệnh sau:
 
     ``` bash
-    pip install -r 'Identify Fire/requirements.txt' 
+      pip install -r 'Identify Fire/requirements.txt' 
     ```
 
 ### Chạy thử code
@@ -35,11 +35,11 @@ Dự án sử dụng cấu trúc mạng `YOLO`, train tận dụng lại model p
 
   - B1: thay dòng lệnh sau 
   ```python
-  cam = cv2.VideoCapture(r'\Identify Fire\test.mp4)
+    cam = cv2.VideoCapture(r'\Identify Fire\test.mp4)
   ``` 
   ở dòng 7 file `\Identify Fire\main.py` thành
   ``` python
-  cam = cv2.VideoCapture(0)
+    cam = cv2.VideoCapture(0)
   ```
 
   - B2: nhấn run để chạy.'
@@ -47,3 +47,9 @@ Dự án sử dụng cấu trúc mạng `YOLO`, train tận dụng lại model p
 ## Tự train lại cho để model tốt hơn 
 
 Model `best n.pt` trên được train dựa trên pre_train model `YOLO11n.py` với epochs là 200. Nếu cấu hình CPU khỏe có thể tự train lại bằng cách chạy file notebook: `\Identify Fire\training\main.ipynb` với số epochs lớn hơn 200. 
+
+
+
+# Phát triển dự án
+
+## Tích hợp chương trình python này vào bộ camera, kết nối thông qua bot telegram. Khi có cháy bot sẽ thông báo qua telegram cho người dùng biết và gửi ảnh chụp ảnh đám cháy đó.
