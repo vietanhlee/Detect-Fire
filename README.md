@@ -8,11 +8,11 @@ Dự án sử dụng cấu trúc mạng `YOLO`, train tận dụng lại model p
 
 
 ## Demo kết quả
-![](https://raw.githubusercontent.com/vietanhlee/Identify-Fire/refs/heads/main/demo%201.png)
+![](https://raw.githubusercontent.com/vietanhlee/Identify-Fire/refs/heads/main/display_github/demo%201.png)
 
 <p align = 'center'> Khi phát hiện ra lửa</p>
 
-![](https://raw.githubusercontent.com/vietanhlee/Identify-Fire/refs/heads/main/demo%202.png)
+![](https://raw.githubusercontent.com/vietanhlee/Identify-Fire/refs/heads/main/display_github/demo%202.png)
 
 <p align = 'center'> Khi Không có lửa </p>
 
@@ -33,7 +33,7 @@ Dự án sử dụng cấu trúc mạng `YOLO`, train tận dụng lại model p
 
 - #### Chạy theo camera local realtime:
 
-  - B1: thay dòng lệnh sau 
+  - **B1**: thay dòng lệnh sau 
   ```python
     cam = cv2.VideoCapture(r'\Identify Fire\test.mp4)
   ``` 
@@ -41,15 +41,17 @@ Dự án sử dụng cấu trúc mạng `YOLO`, train tận dụng lại model p
   ``` python
     cam = cv2.VideoCapture(0)
   ```
-
-  - B2: nhấn run để chạy.'
+  - **B2**: nhấn run để chạy.
 
 ## Tự train lại cho để model tốt hơn 
 
 Model `best n.pt` trên được train dựa trên pre_train model `YOLO11n.py` với epochs là 200. Nếu cấu hình CPU khỏe có thể tự train lại bằng cách chạy file notebook: `\Identify Fire\training\main.ipynb` với số epochs lớn hơn 200. 
 
+# Tích hợp báo cháy thông qua telegram
 
+- Thay `api_key` và `id` của telegram vào 2 dòng này trong code ở file `main.py` để có thể báo về telegram của bạn
 
-# Phát triển dự án
-
-## Tích hợp chương trình python này vào bộ camera, kết nối thông qua bot telegram. Khi có cháy bot sẽ thông báo qua telegram cho người dùng biết và gửi ảnh chụp ảnh đám cháy đó.
+```python
+  api_key = '7278180996:AAF3zjRmDm2tpTYzl5W1rRXMfTBkt47xWBA'
+  id = '5510302349'
+```
