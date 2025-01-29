@@ -1,4 +1,4 @@
-# Nhận diện đám cháy
+# Nhận diện đám cháy và thông báo qua telegram
 
 ## Sơ qua dự án
 
