@@ -55,3 +55,5 @@ Model `best n.pt` trên được train dựa trên pre_train model `YOLO11n.py` 
   api_key = '7278180996:AAF3zjRmDm2tpTYzl5W1rRXMfTBkt47xWBA'
   id = '5510302349'
 ```
+![](https://raw.githubusercontent.com/vietanhlee/Identify-Fire/refs/heads/main/display_github/tele.jpg)
+<p align = 'center'> Thông báo qua telegram</p>
