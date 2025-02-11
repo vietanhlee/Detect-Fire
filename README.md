@@ -29,18 +29,18 @@ Dự án sử dụng mạng `YOLO` train tận dụng lại model pre-trained `Y
 
 - #### Chạy nhanh demo theo data video có sẳn:
 
-    Chỉ cần chạy file  `main.py`
+  Chỉ cần chạy file  `main.py`
 
 - #### Chạy theo camera local realtime:
 
   - **B1**: thay dòng lệnh sau 
-  ```python
-  cam = cv2.VideoCapture('test.mp4)
-  ``` 
-  ở dòng 8 file `main.py` thành
-  ``` python
-  cam = cv2.VideoCapture(0)
-  ```
+    ```python
+    cam = cv2.VideoCapture('test.mp4)
+    ``` 
+    ở dòng 8 file `main.py` thành
+    ``` python
+    cam = cv2.VideoCapture(0)
+    ```
   - **B2**: nhấn run để chạy.
 
 ## Tự train lại cho để model tốt hơn 
@@ -51,9 +51,9 @@ Model `model.pt` trên được train dựa trên pre_train model `YOLO11n.py` v
 
 - Thay `api_key` và `id` của telegram vào 2 dòng này trong code ở file `main.py` để có thể báo về telegram của bạn
 
-```python
+  ```python
   api_key = '7278180996:AAF3zjRmDm2tpTYzl5W1rRXMfTBkt47xWBA'
   id = '5510302349'
-```
-![](https://raw.githubusercontent.com/vietanhlee/Identify-Fire/refs/heads/main/display_github/tele.jpg)
-<p align = 'center'> Thông báo qua telegram</p>
+  ```
+  ![](https://raw.githubusercontent.com/vietanhlee/Identify-Fire/refs/heads/main/display_github/tele.jpg)
+  <p align = 'center'> Thông báo qua telegram</p>
