@@ -22,7 +22,7 @@ Dự án sử dụng mạng `YOLO` train tận dụng lại model pre-trained `Y
 - Mở terminal ở thư mục vừa clone và chạy đoạn lệnh sau:
 
     ``` bash
-      pip install -r 'requirements.txt' 
+  pip install -r 'requirements.txt' 
     ```
 
 ### Chạy thử code
@@ -35,11 +35,11 @@ Dự án sử dụng mạng `YOLO` train tận dụng lại model pre-trained `Y
 
   - **B1**: thay dòng lệnh sau 
   ```python
-    cam = cv2.VideoCapture('test.mp4)
+  cam = cv2.VideoCapture('test.mp4)
   ``` 
-  ở dòng 7 file `main.py` thành
+  ở dòng 8 file `main.py` thành
   ``` python
-    cam = cv2.VideoCapture(0)
+  cam = cv2.VideoCapture(0)
   ```
   - **B2**: nhấn run để chạy.
 
